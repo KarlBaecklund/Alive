@@ -68,15 +68,12 @@
                 android:textSize="30dp" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="260dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dog1" />
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/dogwalkinggif"
+        android:id="@+id/imageView"/>
+
         <TextView
             android:id="@+id/dog_talk"
             android:layout_width="wrap_content"

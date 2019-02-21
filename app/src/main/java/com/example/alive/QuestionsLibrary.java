@@ -1,11 +1,11 @@
 package com.example.alive;
 
 public class QuestionsLibrary {
-    public String questionsDog[] = {"Text1","Text2","Text3","Text4","Text5","Text6","Text7","Text8"
+    public String questionsDog[] = {"Are we going out now?","Can i get a treat?","fido is trying to poop, what do you do?","12pm Fido still wants to play","Need to go work, should Fido come to?","Should we go for a morning walk?","Is fido a good dog? ","Should we go to the dog park today?"
     };
 
     public String nChoice [][]={
-        {"Yes", "No"},{"Maybe", "Baby"},{"Oh","Good"},{"Please","NOO"},{"Jesus","Oh god"},{"Later", "Now"},{"Thank u","Next"},{"No probs", "Hell no"}
+        {"Hell yeah", "No to cold"},{"Good dog", "Sry, you are to fluffy"},{"Let it go","Take fido outside"},{"Let’s play","Go to sleep "},{"Of course","Another day"},{"To tired", "Yes"},{"Hell yeah","Hell no"},{"Sure", "No"}
     };
 
     public String nCorrectAnswer[]={};
