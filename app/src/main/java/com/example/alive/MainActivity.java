@@ -1,3 +1,4 @@
+
 package com.example.alive;
 
 import android.content.Intent;
@@ -16,14 +17,19 @@ import pl.droidsonroids.gif.GifImageView;
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_TEXT = "com.example.application.alive.EXTRA_TEXT";
 
-    /*private static GifImageView imgView;
-    private int currentImage;
-    private int[] images={R.drawable.dogsleepgif, R.drawable.dogwalkinggif};*/
+   /*private static GifImageView imgView;
+   private int currentImage;
+   private int[] images={R.drawable.dogsleepgif, R.drawable.dogwalkinggif};*/
 
     private QuestionsLibrary questionsLibrary = new QuestionsLibrary();
     private int listNr = questionsLibrary.listCount();
     private  Random rand = new Random();
     private int rndNumber = rand.nextInt(listNr);
+
+    private int rndStat1 = rand.nextInt(3)+1;
+    private int rndStat2 = rand.nextInt(3)+1;
+    private  int rndStat3 = rand.nextInt(3)+1;
+
     private TextView textView;
     private TextView questionView;
     private Button buttonChoice1;
@@ -62,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_TEXT, text);
         startActivity(intent);
     }
-   /* private void buttonClick(){
-        imgView = (GifImageView) findViewById(R.id.imageView);
-        //currentImage++;
-        //currentImage = currentImage% images.length;
-        imgView.setImageResource(images[0]);
-    }*/
+  /* private void buttonClick(){
+       imgView = (GifImageView) findViewById(R.id.imageView);
+       //currentImage++;
+       //currentImage = currentImage% images.length;
+       imgView.setImageResource(images[0]);
+   }*/
 
     private void updateStatButton1(){
         int stat1 = Integer.parseInt(getStat1());
@@ -75,63 +81,63 @@ public class MainActivity extends AppCompatActivity {
         int stat3 = Integer.parseInt(getStat3());
         //int rndStatChoice = rand.nextInt(3)+1;
         //int rndChoice = rand.nextInt(2)+1;
-        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(rndNumber), Toast.LENGTH_SHORT); toast.show();
+        //Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(rndStat1), Toast.LENGTH_SHORT); toast.show();
         if (rndNumber == 0){
-            stat1 += 1;
-            stat2 -= 1;
-            stat3 += 1;
+            stat1 += rndStat1;
+            stat2 -= rndStat2;
+            stat3 += rndStat3;
             setStat1(stat1);
             setStat2(stat2);
             setStat3(stat3);
         }
         else if (rndNumber == 1){
-            stat1 += 1;
-            stat2 += 1;
-            stat3 -= 1;
+            stat1 += rndStat1;
+            stat2 += rndStat2;
+            stat3 -= rndStat3;
             setStat1(stat1);
             setStat2(stat2);
             setStat3(stat3);
         }
         else if (rndNumber == 2){
-            stat1 += 1;
-            stat2 -= 1;
+            stat1 += rndStat1;
+            stat2 -= rndStat2;
             setStat1(stat1);
             setStat2(stat2);
         }
         else if (rndNumber == 3){
-            stat1 -= 1;
-            stat3 += 1;
+            stat1 -= rndStat1;
+            stat3 += rndStat3;
             setStat1(stat1);
             setStat3(stat3);
         }
         else if (rndNumber == 4){
-            stat1 -= 1;
-            stat3 += 1;
-            stat2 += 1;
+            stat1 -= rndStat1;
+            stat3 += rndStat3;
+            stat2 += rndStat2;
             setStat1(stat1);
             setStat3(stat3);
             setStat2(stat2);
         }
         else if(rndNumber == 5){
-            stat1 += 1;
-            stat3 += 1;
-            stat2 += 1;
+            stat1 += rndStat1;
+            stat3 += rndStat3;
+            stat2 += rndStat2;
             setStat1(stat1);
             setStat3(stat3);
             setStat2(stat2);
         }
         else if(rndNumber == 6){
-            stat1 -= 1;
-            stat3 += 1;
-            stat2 -= 1;
+            stat1 -= rndStat1;
+            stat3 += rndStat3;
+            stat2 -= rndStat2;
             setStat1(stat1);
             setStat3(stat3);
             setStat2(stat2);
         }
         else if(rndNumber == 7){
-            stat1 -= 1;
-            stat3 += 1;
-            stat2 += 1;
+            stat1 -= rndStat1;
+            stat3 += rndStat3;
+            stat2 += rndStat2;
             setStat1(stat1);
             setStat3(stat3);
             setStat2(stat2);
@@ -146,59 +152,59 @@ public class MainActivity extends AppCompatActivity {
         int stat3 = Integer.parseInt(getStat3());
         //int rndStatChoice = rand.nextInt(3)+1;
         //int rndChoice = rand.nextInt(2)+1;
-        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(rndNumber), Toast.LENGTH_SHORT); toast.show();
+        //Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(rndNumber), Toast.LENGTH_SHORT); toast.show();
         if (rndNumber == 0){
-            stat1 -= 1;
-            stat3 -= 1;
+            stat1 -= rndStat1;
+            stat3 -= rndStat3;
             setStat1(stat1);
             setStat3(stat3);
         }
         else if (rndNumber == 1){
-            stat1 -= 1;
-            stat2 -= 1;
-            stat3 -= 1;
+            stat1 -= rndStat1;
+            stat2 -= rndStat2;
+            stat3 -= rndStat3;
             setStat1(stat1);
             setStat2(stat2);
             setStat3(stat3);
         }
         else if (rndNumber == 2){
-            stat1 -= 1;
-            stat2 -= 1;
-            stat3 += 1;
+            stat1 -= rndStat1;
+            stat2 -= rndStat2;
+            stat3 += rndStat3;
             setStat1(stat1);
             setStat2(stat2);
             setStat3(stat3);
         }
         else if (rndNumber == 3){
-            stat1 += 1;
-            stat3 -= 1;
+            stat1 += rndStat1;
+            stat3 -= rndStat3;
             setStat1(stat1);
             setStat2(stat3);
         }
         else if (rndNumber == 4){
-            stat1 += 1;
-            stat2 -= 1;
-            stat3 -= 1;
+            stat1 += rndStat1;
+            stat2 -= rndStat2;
+            stat3 -= rndStat3;
             setStat1(stat1);
             setStat2(stat2);
             setStat3(stat3);
         }
         else if(rndNumber == 5){
-            stat1 -= 1;
-            stat3 += 1;
+            stat1 -= rndStat1;
+            stat3 += rndStat3;
             setStat1(stat1);
             setStat3(stat3);
         }
         else if(rndNumber == 6){
-            stat1 -= 1;
-            stat3 -= 1;
-            stat2 -= 1;
+            stat1 -= rndStat1;
+            stat3 -= rndStat3;
+            stat2 -= rndStat2;
             setStat1(stat1);
             setStat3(stat3);
             setStat2(stat2);
         }
         else if(rndNumber == 7){
-            stat1 += 1;
+            stat1 += rndStat1;
             setStat1(stat1);
         }
         dogDead(stat1,stat2,stat3);
@@ -229,6 +235,9 @@ public class MainActivity extends AppCompatActivity {
         buttonChoice2.setText(questionsLibrary.getChoiceTwo(rndNumber));
         questionView.setText(questionsLibrary.getQuestion(rndNumber));
         rndNumber = rand.nextInt(listNr);
+        rndStat1 = rand.nextInt(3)+1;
+        rndStat2 = rand.nextInt(3)+1;
+        rndStat3 = rand.nextInt(3)+1;
     }
 
     public String getStat1(){
